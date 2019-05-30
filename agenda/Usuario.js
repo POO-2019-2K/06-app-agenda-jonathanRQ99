@@ -68,4 +68,16 @@ export default class Usuario {
         });
         return found;
     }
+
+    addEmployee2(Agenda){
+        let found = this._findCorreo(Agenda.corrreo);
+        if (found >= 0){
+            swal.fire({
+                type: "error",
+                tittle: "error",
+                text: "ya existe el registro"
+            });
+            return;
+        }
+    }
 }
