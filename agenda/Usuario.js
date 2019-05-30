@@ -58,4 +58,14 @@ export default class Usuario {
         }
         this._taller.push(objAgenda);
     }
+    _findCorreo(correo){
+        letfound = -1
+        this._taller.forEach((Agenda, index) => {
+            if(Agenda.correo === correo){
+                found = index;
+                return;
+            }
+        });
+        return found;
+    }
 }
