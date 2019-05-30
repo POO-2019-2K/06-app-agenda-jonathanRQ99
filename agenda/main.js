@@ -3,7 +3,7 @@ import Agenda from "./Agenda.js";
 
 class Main {
     constructor() {
-        let agenda = new Usuario(
+        let Usuario = new Agenda(
             document.querySelector("#agenda"));
 
             document.querySelector("#btndd").addEventListener("click",()=> {
@@ -21,14 +21,14 @@ class Main {
                     
                     let correo = document.querySelector("#correo").value;
 
-                    let objUsuario = {
+                    let objAgenda = {
                         nombre: nombre,
                         fechaN: fechaN,
                         correo: correo,
                         telefono: telefono
                     }
-                    let Usuario = new Usuario(objUsuario);
-                    this._agenda.addEmployee2(Usuario);
+                    let Agenda = new Agenda(objAgenda);
+                    this._usuario.addEmployee2(agenda);
                     
                 }
             });
