@@ -33,4 +33,29 @@ export default class Usuario {
             return;
         });
     }
+
+    _addAgenda(Agenda) {
+        let row = this._tableUsuario.insertRow(-1);
+        let cellnombre = row.insertCell(0);
+        let cellfechaN = row.insertCell(1);
+        let cellcorreo = row.insertCell(2);
+        let cellAge = row.insertCell(3);
+        let celltelefono = row.insertCell(4);
+        row.insertCell(5);
+        
+        cellnombre.innerHTML = Agenda.nombre;
+        cellfechaN.innerHTML = Agenda.fechaN;
+        cellcorreo.innerHTML = Agenda.correo;
+        cellAge.innerHTML = Agenda.getAge;
+        celltelefono.innerHTML = Agenda.telefono;
+        this._addEditDeleteToRow(row, Agenda);
+        
+        let objAgenda = {
+            nombre: Agenda.nombre,
+            fechaN: Agenda.fechaN,
+            correo: Agenda.correo,
+            telefono: Agenda.telefono
+        }
+        this._taller.push(objAgenda);
+    }
 }
