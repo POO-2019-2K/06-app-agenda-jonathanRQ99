@@ -79,5 +79,10 @@ export default class Usuario {
             });
             return;
         }
+        this._addAgenda(Agenda);
+    localStorage.setItem("taller", JSON.stringify(this._taller));
+    console.log(localStorage.getItem("taller"));
+}
+
     }
 }
