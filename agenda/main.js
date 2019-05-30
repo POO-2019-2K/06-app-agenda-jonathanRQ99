@@ -11,7 +11,28 @@ class Main {
                 form.classList.add("was-validated");
 
                 if (form.checkValidity() === true) {
+                    let nombre = document.querySelector("#nombre").Value;
+                    let fechaN = document.querySelector("#fechaN").Value;
+                    let correo = document.querySelector("#correo").Value;
+                    let telefono = document.querySelector("#telefono").Value;
+                    fechaN = fechaN.split('-');
+                    
+                    let fechaN = new Date(fechaN[0], fechaN[1], fechaN[2]);
+                    
+                    let correo = document.querySelector("#correo").value;
+
+                    let objUsuario = {
+                        nombre: nombre,
+                        fechaN: fechaN,
+                        correo: correo,
+                        telefono: telefono
+                    }
+                    let Usuario = new Usuario(objUsuario);
+                    this._agenda.addEmployee2(Usuario);
                     
                 }
-            })
+            });
+
+
+            new Main();
 
